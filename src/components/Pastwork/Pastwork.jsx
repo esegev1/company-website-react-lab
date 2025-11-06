@@ -40,13 +40,23 @@ const Pastwork = (props) => {
     const parentStyle = {
         display: props.activePage === 'pastWork' ? 'flex' : 'none',
         justifyContent: 'center',
+        // height: '100vh',
+        // overflow: 'scroll',
+        // margin: '5px',
+    }
+
+    const ulStyle = {
+        // height: '100%',
+        overflow: 'sroll',
+        margin: '10px',
     }
 
     return (
         <div style={parentStyle}>
-            <ul>
+            <ul style={ulStyle}>
                 {pastWork.map((work, index) => (
-                    <li key={index}>
+                    <li key={index} className="pastWork">
+                        <img src={work.imgUrl} />
                         <h2>{work.client}</h2>
                         <p>Relationship Length: {work.duration}</p>
                         <p>{work.description}</p>
