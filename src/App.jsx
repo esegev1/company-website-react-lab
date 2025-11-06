@@ -18,15 +18,6 @@ const App = () => {
     displayName: 'Home',
   })
 
-  const pickPage = () => {
-    switch (activePage) {
-      case 'contact': <Contact />
-        break;
-      case 'History': <History />
-        break;
-    }
-  }
-
   const changePage = (targetPage) => {
     setActivePage(targetPage);
 
@@ -34,10 +25,11 @@ const App = () => {
   return (
     <>
       <Navbar changePage={changePage} />
-      {pickPage}
-      {/* <Contact />
-      <History style={'display:' + activePage.name === 'history' ? 'block' : 'none'} /> */}
-
+      <History activePage={activePage} />
+      <Pastwork activePage={activePage} />
+      <Staff activePage={activePage} />
+      <Contact activePage={activePage} />
+      <ExternalLinks activePage={activePage} />
     </>
   )
 }

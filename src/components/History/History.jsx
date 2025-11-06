@@ -1,7 +1,13 @@
-const History = () => {
+const History = (props) => {
+    console.log(`inside history: ${props.activePage}`);
+
+    const pStyle = {
+        display: props.activePage === 'history' ? 'block' : 'none'
+    }
+    
     return (
         <>
-        <p>History</p>
+        <p style={pStyle}>History</p>
         </>
 
     )
