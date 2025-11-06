@@ -6,7 +6,8 @@ const Contact = (props) => {
         alignItems: 'flex-start',
         justifyContent: 'center',
         gap: '20px',
-        margin: '40px'
+        margin: '40px',
+        color: 'white',
     }
 
     const h1Style = {
@@ -15,6 +16,7 @@ const Contact = (props) => {
 
     const imgStyle = {
         width: '500px',
+        borderRadius: '10px',
     }
 
     const formStyle = {
