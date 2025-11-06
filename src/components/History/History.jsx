@@ -8,18 +8,20 @@ const History = (props) => {
                               and submits PRs at 3:14 AM titled “small fix.” We now specialize in building tools that help other tools write tools, which 
                               is very efficient until the tools start scheduling retros for the tools. Productivity is up, morale is chaotic, and our coffee machine has a roadmap.`;
 
-    const pStyle = {
+    const parentStyle = {
         display: props.activePage === 'history' ? 'flex' : 'none',
+        justifyContent: 'center',
+    }
+
+    const pStyle = {
+        display: 'flex',
         color: 'white',
         flexDirection: 'column',
         alignItems: 'center',
         width: '600px',
     }
 
-    const parentStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-    }
+
 
     return (
         <div style={parentStyle}>
@@ -29,7 +31,6 @@ const History = (props) => {
                 <p>{companyHistoryP2}</p>
             </div>
         </div>
-
     )
 }
 
